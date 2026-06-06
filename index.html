@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Misteri Sumur | DOMUS ISAACI</title>
+
+<style>
+
+body{
+background:#0b0b0b;
+color:#e5e5e5;
+font-family:Georgia,serif;
+margin:0;
+padding:0;
+}
+
+header{
+padding:80px 20px;
+text-align:center;
+}
+
+header h1{
+color:#d4af37;
+font-size:42px;
+}
+
+header p{
+color:#bbb;
+font-style:italic;
+}
+
+.map{
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+gap:20px;
+padding:30px;
+}
+
+.well{
+width:180px;
+height:180px;
+background:#151515;
+border:2px solid #d4af37;
+border-radius:50%;
+cursor:pointer;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:22px;
+transition:.3s;
+}
+
+.well:hover{
+transform:scale(1.05);
+background:#222;
+}
+
+.story{
+max-width:800px;
+margin:auto;
+padding:30px;
+font-size:20px;
+line-height:1.8;
+display:none;
+}
+
+.quote{
+color:#d4af37;
+font-style:italic;
+font-size:24px;
+margin:40px 0;
+text-align:center;
+}
+
+.btn{
+display:inline-block;
+padding:15px 25px;
+background:#d4af37;
+color:#111;
+text-decoration:none;
+border-radius:8px;
+font-weight:bold;
+}
+
+.footer{
+text-align:center;
+padding:60px;
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+
+<h1>MISTERI SUMUR</h1>
+
+<p>
+Mengapa Alkitab mengingat sumur-sumur Ishak?
+</p>
+
+<p>
+Klik salah satu sumur untuk memulai.
+</p>
+
+</header>
+
+<div class="progress-wrap">
+
+<div class="progress-label">
+Penjelajahan 60%
+</div>
+
+<div class="progress">
+<div class="bar" style="width:60%;"></div>
+</div>
+
+</div>
+
+<div class="map">
+
+<div class="well" onclick="showStory('esek')">
+ESEK
+</div>
+
+<div class="well" onclick="showStory('sitnah')">
+SITNAH
+</div>
+
+<div class="well" onclick="showStory('rehobot')">
+REHOBOT
+</div>
+
+<div class="well" onclick="showStory('beer')">
+BEERSYEBA
+</div>
+
+</div>
+
+<div id="story" class="story"></div>
+
+<div class="footer">
+
+<a href="esau-yang-tersingkir.html" class="btn">
+Lanjut ke Esau yang Tersingkir →
+</a>
+
+</div>
+
+<script>
+
+function showStory(type){
+
+let content="";
+
+if(type==="esek"){
+
+content=`
+
+<h2>ESEK</h2>
+
+<p>
+Esek berarti perselisihan.
+</p>
+
+<p>
+Ishak menggali.
+Air ditemukan.
+Tetapi orang lain memperebutkannya.
+</p>
+
+<div class="quote">
+
+Tidak semua sumber kehidupan akan diterima tanpa pertentangan.
+
+</div>
+
+<p>
+DOMUS ISAACI melihat Esek sebagai ruang pertama:
+tempat manusia belajar bahwa setiap warisan akan diuji.
+</p>
+
+`;
+
+}
+
+if(type==="sitnah"){
+
+content=`
+
+<h2>SITNAH</h2>
+
+<p>
+Sitnah berarti permusuhan.
+</p>
+
+<p>
+Perselisihan berubah menjadi penolakan.
+</p>
+
+<div class="quote">
+
+Kadang masalah bukan lagi soal air.
+
+Tetapi soal hati manusia.
+
+</div>
+
+<p>
+Sumur kedua mengajarkan bahwa tidak semua konflik dapat dimenangkan.
+</p>
+
+`;
+
+}
+
+if(type==="rehobot"){
+
+content=`
+
+<h2>REHOBOT</h2>
+
+<p>
+Rehobot berarti kelapangan.
+</p>
+
+<p>
+Untuk pertama kalinya tidak ada yang merebut sumur itu.
+</p>
+
+<div class="quote">
+
+Setelah pertikaian dan penolakan,
+akhirnya ada ruang.
+
+</div>
+
+<p>
+Mungkin rumah tidak dibangun melalui kemenangan.
+Tetapi melalui ketekunan.
+</p>
+
+`;
+
+}
+
+if(type==="beer"){
+
+content=`
+
+<h2>BEERSYEBA</h2>
+
+<p>
+Di sini Ishak membangun mezbah.
+</p>
+
+<p>
+Di sini sumur dan perjanjian bertemu.
+</p>
+
+<div class="quote">
+
+Rumah bukan sekadar tempat tinggal.
+
+Rumah adalah tempat perjanjian dipelihara.
+
+</div>
+
+<p>
+Inilah salah satu inti DOMUS ISAACI.
+
+Sumur bukan sekadar sumber air.
+
+Sumur adalah memori hidup sebuah rumah.
+
+</p>
+
+`;
+
+}
+
+document.getElementById("story").style.display="block";
+document.getElementById("story").innerHTML=content;
+
+}
+
+</script>
+
+</body>
+</html>
